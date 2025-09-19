@@ -116,19 +116,26 @@
             margin-top: 20px;
             position: relative;
             overflow: hidden;
-            border-radius: 8px;
+            border-radius: 0;
             cursor: pointer;
+            background-color: #d0d0d0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            aspect-ratio: 16/9;
         }
         
         .project-image img {
             width: 100%;
-            height: auto;
-            border-radius: 8px;
-            border: 1px solid #e8e6e3;
+            height: 100%;
+            border-radius: 0;
+            border: none;
             background-color: #f8f8f8;
             transition: all 0.3s ease;
             position: relative;
             z-index: 1;
+            object-fit: cover;
+            display: block;
         }
         
         .project-image::before {
@@ -141,7 +148,7 @@
             background: rgba(0, 0, 0, 0);
             transition: all 0.3s ease;
             pointer-events: none;
-            border-radius: 8px;
+            border-radius: 0;
             z-index: 2;
         }
         
@@ -182,17 +189,67 @@
         .first-paragraph .intro-image {
             flex-shrink: 0;
             width: 220px;
-            max-height: 330px;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 0;
             border: 1px solid #e8e6e3;
             margin-top: 8px;
+            aspect-ratio: 832/1248;
+            background-color: #d0d0d0;
         }
         
         .first-paragraph p {
             margin: 0;
             line-height: 1.7;
             flex: 1;
+        }
+
+        .credentials {
+            margin: 40px -30px;
+            padding: 25px 30px;
+            margin-bottom: 40px;
+            background-color: #2c2c2c;
+            color: #ffffff;
+            border-radius: 0;
+        }
+        
+        .credentials .first-paragraph {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 0;
+        }
+        
+        .credentials .first-paragraph .intro-image {
+            flex-shrink: 0;
+            width: 220px;
+            object-fit: cover;
+            border-radius: 0;
+            border: none;
+            margin-top: 8px;
+            aspect-ratio: 832/1248;
+            background-color: #d0d0d0;
+        }
+        
+        .credentials .bio-text {
+            flex: 1;
+            margin: 0;
+            line-height: 1.7;
+        }
+        
+        .credentials p {
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        
+        .credentials p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .credentials h2 {
+            color: #ffffff;
+            font-size: 22px;
+            margin-bottom: 25px;
+            font-weight: bold;
         }
 
         .clearfix::after {
@@ -204,6 +261,10 @@
         strong {
             color: #000000;
             font-weight: bold;
+        }
+        
+        em {
+            font-style: italic;
         }
         
         .contact {
@@ -250,32 +311,35 @@
                 max-width: 100%;
             }
 
-            .first-paragraph {
+            .credentials .first-paragraph {
                 flex-direction: column;
             }
             
-            .first-paragraph .intro-image {
+            .credentials .first-paragraph .intro-image {
                 width: 100%;
                 max-width: 220px;
                 margin-bottom: 20px;
                 align-self: center;
             }
+            
+            .credentials {
+                margin: 30px -20px;
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Video Editing Proposal for Not Another Club</h1>
+    <h1>Video editing services proposal - Not Another Club</h1>
     
     <div class="intro">
-        <div class="first-paragraph">
-            <img src="andy-lowe.jpg" alt="A portrait of the video editor, Andy Lowe" class="intro-image">
-            <p>My name is Andy Lowe and I'm based in Bristol, UK. 
-I'm a video editor with many years of experience but I've been doing it professionally since 2021 after I did a career change from being a professional musician (due to having kids). When creating video content, I approach every project as a storytelling challenge - I understand the importance of pacing and how to grab and retain the viewers attention from the first second. This translates into better conversion rates and ultimately more viewers being converted into customers. I see the bigger picture beyond just cutting footage together. I'm focused on getting the most out of your source material.</p>
-        </div>
+        <p>Dear Sophia - I recently learned that you were looking for someone to help you create paid ads and trailers for your online hair and beauty industry membership community. After researching your business and website I have to say I am very impressed and intrigued, and I believe I can definitely add value to your operation and deliver the results you are looking for - driving more memberships to your platform.</p>
 
-        <p>I also have a background in music composition and production, which means I can handle custom soundtracks and audio design when projects call for it. The soundtrack can really elevate something good into something wonderful!</p>
+        <p><strong>I create promotional videos that convert viewers into paying customers.</strong> My work focuses on the same core challenge as paid ads - grabbing attention and driving real business results. The videos that I worked on for kickstarter campaigns for example are not traditional 'adverts' but they have the same goal, engagement, capturing attention and keeping it. Ultimately this leads to viewer conversion and sales.</p>
 
-        <p>Below I have listed three examples of my work that shows a range of skills.</p>
+        <p>I'm excited about <em>Not Another Club</em> because your brand is all about fun, authenticity and originality - exactly the kind of project where I do my best work. I cannot wait to hear about your ideas for the content you want to create.</p>
+
+        <p>Here are three examples of my work:</p>
     </div>
 
     <div class="project">
@@ -286,9 +350,9 @@ I'm a video editor with many years of experience but I've been doing it professi
             </a>
         </div>
         <div class="project-content">
-            <p>I created the promotional videos for Lazarus Press's book launch campaigns. These weren't just any book launches - we were crowdfunding translations of obscure 19th century occult texts. The challenge was making something incredibly niche compelling enough that complete strangers would open their wallets and back the project.</p>
+            <p>I created the promotional videos for Lazarus Press's book launch campaigns. This was an incredibly niche project that required the right sort of content to engage the target audience. Understanding what would resonate with the client's audience was an essential skill when working on this project.</p>
             
-            <p>The videos had to capture the handmade, artisarial aesthetic that was crucial to the brand, using original book illustrations in a stop-motion style. The client was very determined to pursue this route as a key differentiator in a landscape that is quickly becoming overrun with obviously AI-generated, cheap and quick content. I also handled all the sound design and music arrangement - cutting together classical pieces to create an emotional journey, plus composing the dramatic organ theme for the first campaign's finale.</p>
+            <p>The client had a vision which was a handmade, artisarial aesthetic, using original book illustrations in a stop-motion style. The client was very determined to pursue this route as a key differentiator in a landscape that is quickly becoming overrun with obviously AI-generated content. I also handled all the sound design and music arrangement - cutting together classical pieces to match the storytelling and create an emotional journey. I also composed the dramatic organ theme for the first campaign's finale.</p>
             
             <p>The results speak for themselves - both videos were central to campaigns that broke records for book launches on Kickstarter.</p>
             
@@ -337,7 +401,7 @@ I'm a video editor with many years of experience but I've been doing it professi
             </a>
         </div>
         <div class="project-content">
-            <p>A crypto wallet needed to announce their new app integration. Their brand is "Nautilus" so they wanted something with a submarine theme. I took old movie footage of a submarine, layered in modern UI elements, and created a reflection effect of their logo in the captain's mask.</p>
+            <p>A blockchain wallet needed to announce their new app integration. Their brand is "Nautilus" so they wanted something with a submarine theme. I took old movie footage of a submarine, layered in modern UI elements, and created a reflection effect of their logo in the captain's mask.</p>
             
             <p>The whole thing needed to feel both vintage and cutting-edge, matching their community's vibe perfectly.</p>
             
@@ -353,12 +417,24 @@ I'm a video editor with many years of experience but I've been doing it professi
         </div>
     </div>
 
+    <div class="credentials">
+        <div class="first-paragraph">
+            <img src="https://github.com/andylowe14/NotAnotherClub_VideoProposal/blob/main/andy-lowe.jpg?raw=true" alt="A portrait of the video editor, Andy Lowe" class="intro-image">
+            <div class="bio-text">
+                <h2>About Me</h2>
+                <p>I'm Andy Lowe, based in Bristol, UK. I've been editing video professionally since 2021, with a background in music production, composition, and sound design.</p>
+                
+                <p>I work best with clients who have real passion for what they're doing, who are mission-based. When you care deeply about your project, I feed off that energy and go the extra mile to make it exceptional. I have a 100% client retention rate - every client I've worked with has given me more work and referred others.</p>
+            </div>
+        </div>
+    </div>
+
     <div class="closing">
-        <p>For Not Another Club, I would be keen to hear what you are specifically looking to create with regards to effective paid adverts and trailers. I can only assume these would be to promote membership to your online club. My initial thoughts are that I would aim to create content that mirrors your distinctive visual style. Your brand is all about authenticity and originality – my edits would be designed to highlight that personality.</p>
+        <p>I'd love to hear more about your vision for the paid ads and trailers. I think I can create something that really captures the <em>Not Another Club</em> vibe while bringing in new members.</p>
 
-        <p>I work best with clients who have real passion for what they're doing, who are mission-based, and it seems like you fit that bill exactly. When you care deeply about your project, I feed off that energy and go the extra mile to make it exceptional. I have a 100% client retention rate - every client I've worked with has given me more work and/or referred others.</p>
+        <p>If you're interested, we could have a quick chat about what you're thinking. From there I can put together some ideas to show you how I'd tackle it.</p>
 
-        <p>If you would be willing to explore the possibility of us working together, the next step would be to set up a short call at a convenient time. I would love to hear your vision for the content you would like to have created, and from there I can put together a tailored outline and sample concepts so you can see exactly how I would approach your content.</p>
+        <p><strong>Let me know if you'd like to discuss it further!</strong></p>
     </div>
 
     <div class="contact">
