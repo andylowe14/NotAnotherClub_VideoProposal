@@ -101,6 +101,9 @@
             transition: color 0.3s ease;
             position: relative;
             z-index: 1;
+            display: block;
+            width: 100%;
+            height: 100%;
         }
         
         .project-link:hover a {
@@ -134,14 +137,27 @@
             background-color: #f8f8f8;
         }
 
-        .intro-image {
-            float: left;
-            width: 200px;
-            height: auto;
-            border-radius: 8px;
-            margin-right: 20px;
+        .first-paragraph {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
             margin-bottom: 20px;
+        }
+        
+        .first-paragraph .intro-image {
+            flex-shrink: 0;
+            width: 220px;
+            max-height: 330px;
+            object-fit: cover;
+            border-radius: 8px;
             border: 1px solid #e8e6e3;
+            margin-top: 8px;
+        }
+        
+        .first-paragraph p {
+            margin: 0;
+            line-height: 1.7;
+            flex: 1;
         }
 
         .clearfix::after {
@@ -199,11 +215,15 @@
                 max-width: 100%;
             }
 
-            .intro-image {
+            .first-paragraph {
+                flex-direction: column;
+            }
+            
+            .first-paragraph .intro-image {
                 width: 100%;
-                float: none;
-                margin-right: 0;
+                max-width: 220px;
                 margin-bottom: 20px;
+                align-self: center;
             }
         }
     </style>
@@ -212,9 +232,11 @@
     <h1>Video Editing Proposal for Not Another Club</h1>
     
     <div class="intro">
-        <img src="andy-lowe.jpg" alt="A portrait of the video editor, Andy Lowe" class="intro-image">
-        <p>My name is Andy Lowe and I'm based in Bristol, UK. 
+        <div class="first-paragraph">
+            <img src="andy-lowe.jpg" alt="A portrait of the video editor, Andy Lowe" class="intro-image">
+            <p>My name is Andy Lowe and I'm based in Bristol, UK. 
 I'm a video editor with many years of experience but I've been doing it professionally since 2021 after I did a career change from being a professional musician (due to having kids). When creating video content, I approach every project as a storytelling challenge - I understand the importance of pacing and how to grab and retain the viewers attention from the first second. This translates into better conversion rates and ultimately more viewers being converted into customers. I see the bigger picture beyond just cutting footage together. I'm focused on getting the most out of your source material.</p>
+        </div>
 
         <p>I also have a background in music composition and production, which means I can handle custom soundtracks and audio design when projects call for it. The soundtrack can really elevate something good into something wonderful!</p>
 
@@ -240,7 +262,9 @@ I'm a video editor with many years of experience but I've been doing it professi
                     <li>Both campaigns were featured by Kickstarter as quality projects</li>
                 </ul>
                 <div class="project-image">
-                    <img src="kickstarter-campaign.jpg" alt="Kickstarter campaign results showing funding progress">
+                    <a href="https://www.kickstarter.com/projects/lazarus-press/the-devil-in-the-19th-century-vol-2">
+                        <img src="kickstarter-campaign.jpg" alt="Kickstarter campaign results showing funding progress">
+                    </a>
                 </div>
             </div>
         </div>
@@ -262,7 +286,9 @@ I'm a video editor with many years of experience but I've been doing it professi
                     <li>The video successfully converted browsers into customers by clearly demonstrating the product benefit</li>
                 </ul>
                 <div class="project-image">
-                    <img src="natracare-demo.jpg" alt="Natracare product demonstration video screenshot">
+                    <a href="https://youtu.be/QeztWUzScWw">
+                        <img src="natracare-demo.jpg" alt="Natracare product demonstration video screenshot">
+                    </a>
                 </div>
             </div>
         </div>
@@ -284,14 +310,16 @@ I'm a video editor with many years of experience but I've been doing it professi
                     <li>Hit exactly what they needed for algorithm engagement and community response</li>
                 </ul>
                 <div class="project-image">
-                    <img src="nautilus-social.jpg" alt="Nautilus wallet social media video screenshot">
+                    <a href="https://x.com/NautilusWallet/status/1490148620078776324">
+                        <img src="nautilus-social.jpg" alt="Nautilus wallet social media video screenshot">
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="closing">
-        <p>For Not Another Club, I would be keen to hear what you are specifically looking to create with regards to effective paid adverts and trailers. I can only assume these would be to promote membership to your online club. My initial thoughts are that I would aim to create content that mirrors your distinctive visual style. Your brand is all about authenticity and originality — my edits would be designed to highlight that personality.</p>
+        <p>For Not Another Club, I would be keen to hear what you are specifically looking to create with regards to effective paid adverts and trailers. I can only assume these would be to promote membership to your online club. My initial thoughts are that I would aim to create content that mirrors your distinctive visual style. Your brand is all about authenticity and originality – my edits would be designed to highlight that personality.</p>
 
         <p>I work best with clients who have real passion for what they're doing, who are mission-based, and it seems like you fit that bill exactly. When you care deeply about your project, I feed off that energy and go the extra mile to make it exceptional. I have a 100% client retention rate - every client I've worked with has given me more work and/or referred others.</p>
 
