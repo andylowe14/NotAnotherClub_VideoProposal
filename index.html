@@ -58,19 +58,18 @@
             border: 1px solid #d4d2cf;
             border-radius: 8px;
             padding: 15px 20px;
-            margin: 15px 0 20px 0;
+            margin: 25px 0 20px 0;
             text-align: center;
             transition: all 0.3s ease;
             cursor: pointer;
             position: relative;
-            overflow: hidden;
         }
         
         .project-link:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
             border-color: #999999;
-            background-color: #fdfdfd;
+            background-color: #f5e6d8;
         }
         
         .project-link:active {
@@ -78,27 +77,12 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
         
-        .project-link::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
-            transition: left 0.6s ease;
-        }
-        
-        .project-link:hover::before {
-            left: 100%;
-        }
-        
         .project-link a {
             color: #000000;
             text-decoration: none;
             font-weight: bold;
             font-size: 16px;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
             position: relative;
             z-index: 1;
             display: block;
@@ -108,6 +92,8 @@
         
         .project-link:hover a {
             color: #222222;
+            text-decoration: none;
+            transform: scale(1.02);
         }
         
         .project ul {
@@ -118,6 +104,7 @@
         .project li {
             margin-bottom: 5px;
             color: #333333;
+            font-weight: bold;
         }
         
         .results-section {
@@ -127,6 +114,10 @@
         
         .project-image {
             margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
         }
         
         .project-image img {
@@ -135,6 +126,50 @@
             border-radius: 8px;
             border: 1px solid #e8e6e3;
             background-color: #f8f8f8;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .project-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            border-radius: 8px;
+            z-index: 2;
+        }
+        
+        .project-image::after {
+            content: '▶';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 48px;
+            opacity: 0;
+            transition: all 0.3s ease;
+            pointer-events: none;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+            z-index: 3;
+        }
+        
+        .project-image:hover::before {
+            background: rgba(0, 0, 0, 0.25);
+        }
+        
+        .project-image:hover::after {
+            opacity: 1;
+        }
+        
+        .project-image:hover img {
+            transform: scale(1.02);
         }
 
         .first-paragraph {
@@ -245,13 +280,15 @@ I'm a video editor with many years of experience but I've been doing it professi
 
     <div class="project">
         <h2>Record-Breaking Kickstarter Campaign</h2>
-        <div class="project-link">
-            <a href="https://www.kickstarter.com/projects/lazarus-press/the-devil-in-the-19th-century-vol-2">View the campaign →</a>
+        <div class="project-image">
+            <a href="https://www.kickstarter.com/projects/lazarus-press/the-devil-in-the-19th-century-vol-2">
+                <img src="kickstarter-campaign.jpg" alt="Kickstarter campaign results showing funding progress">
+            </a>
         </div>
         <div class="project-content">
             <p>I created the promotional videos for Lazarus Press's book launch campaigns. These weren't just any book launches - we were crowdfunding translations of obscure 19th century occult texts. The challenge was making something incredibly niche compelling enough that complete strangers would open their wallets and back the project.</p>
             
-            <p>The videos had to capture the handmade, artisanal aesthetic that was crucial to the brand, using original book illustrations in a stop-motion style. The client was very determined to pursue this route as a key differentiator in a landscape that is quickly becoming overrun with obviously AI-generated, cheap and quick content. I also handled all the sound design and music arrangement - cutting together classical pieces to create an emotional journey, plus composing the dramatic organ theme for the first campaign's finale.</p>
+            <p>The videos had to capture the handmade, artisarial aesthetic that was crucial to the brand, using original book illustrations in a stop-motion style. The client was very determined to pursue this route as a key differentiator in a landscape that is quickly becoming overrun with obviously AI-generated, cheap and quick content. I also handled all the sound design and music arrangement - cutting together classical pieces to create an emotional journey, plus composing the dramatic organ theme for the first campaign's finale.</p>
             
             <p>The results speak for themselves - both videos were central to campaigns that broke records for book launches on Kickstarter.</p>
             
@@ -261,19 +298,19 @@ I'm a video editor with many years of experience but I've been doing it professi
                     <li><strong>Campaign 2:</strong> £75,000+ in the first 48 hours alone</li>
                     <li>Both campaigns were featured by Kickstarter as quality projects</li>
                 </ul>
-                <div class="project-image">
-                    <a href="https://www.kickstarter.com/projects/lazarus-press/the-devil-in-the-19th-century-vol-2">
-                        <img src="kickstarter-campaign.jpg" alt="Kickstarter campaign results showing funding progress">
-                    </a>
-                </div>
             </div>
+        </div>
+        <div class="project-link">
+            <a href="https://www.kickstarter.com/projects/lazarus-press/the-devil-in-the-19th-century-vol-2">View the campaign →</a>
         </div>
     </div>
 
     <div class="project">
         <h2>Product Demonstration That Actually Works</h2>
-        <div class="project-link">
-            <a href="https://youtu.be/QeztWUzScWw">Watch the video →</a>
+        <div class="project-image">
+            <a href="https://youtu.be/QeztWUzScWw">
+                <img src="natracare-demo.jpg" alt="Natracare product demonstration video screenshot">
+            </a>
         </div>
         <div class="project-content">
             <p>Natracare needed a 1-minute video demonstrating that their wipes actually dissolve like toilet paper. Sounds simple, but the challenge was making something that people would actually want to watch and share, not just skip past.</p>
@@ -285,19 +322,19 @@ I'm a video editor with many years of experience but I've been doing it professi
                     <li>Widely shared across their social channels and embedded in multiple blog posts</li>
                     <li>The video successfully converted browsers into customers by clearly demonstrating the product benefit</li>
                 </ul>
-                <div class="project-image">
-                    <a href="https://youtu.be/QeztWUzScWw">
-                        <img src="natracare-demo.jpg" alt="Natracare product demonstration video screenshot">
-                    </a>
-                </div>
             </div>
+        </div>
+        <div class="project-link">
+            <a href="https://youtu.be/QeztWUzScWw">Watch the video →</a>
         </div>
     </div>
 
     <div class="project">
         <h2>Viral Social Media Content</h2>
-        <div class="project-link">
-            <a href="https://x.com/NautilusWallet/status/1490148620078776324">See the post →</a>
+        <div class="project-image">
+            <a href="https://x.com/NautilusWallet/status/1490148620078776324">
+                <img src="nautilus-social.jpg" alt="Nautilus wallet social media video screenshot">
+            </a>
         </div>
         <div class="project-content">
             <p>A crypto wallet needed to announce their new app integration. Their brand is "Nautilus" so they wanted something with a submarine theme. I took old movie footage of a submarine, layered in modern UI elements, and created a reflection effect of their logo in the captain's mask.</p>
@@ -309,12 +346,10 @@ I'm a video editor with many years of experience but I've been doing it professi
                     <li>Hundreds of likes, 40+ retweets, 20+ comments</li>
                     <li>Hit exactly what they needed for algorithm engagement and community response</li>
                 </ul>
-                <div class="project-image">
-                    <a href="https://x.com/NautilusWallet/status/1490148620078776324">
-                        <img src="nautilus-social.jpg" alt="Nautilus wallet social media video screenshot">
-                    </a>
-                </div>
             </div>
+        </div>
+        <div class="project-link">
+            <a href="https://x.com/NautilusWallet/status/1490148620078776324">See the post →</a>
         </div>
     </div>
 
