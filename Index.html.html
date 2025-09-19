@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Video Editing Proposal</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.7;
+            color: #333333;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 50px 30px;
+            background-color: #faf9f7;
+        }
+        
+        h1 {
+            color: #000000;
+            font-size: 24px;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #333333;
+        }
+        
+        .project {
+            margin: 40px -30px;
+            padding: 25px 30px;
+            background-color: #f5f3f0;
+        }
+        
+        .project h2 {
+            color: #000000;
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .project-content {
+            margin-top: 20px;
+        }
+        
+        .project-link {
+            background-color: #ffffff;
+            border: 1px solid #d4d2cf;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin: 15px 0 20px 0;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border-color: #999999;
+            background-color: #fdfdfd;
+        }
+        
+        .project-link:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .project-link:hover::before {
+            left: 100%;
+        }
+        
+        .project-link a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .project-link:hover a {
+            color: #222222;
+        }
+        
+        .project ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        .project li {
+            margin-bottom: 5px;
+            color: #333333;
+        }
+        
+        .results-section {
+            display: block;
+            margin-top: 20px;
+        }
+        
+        .project-image {
+            margin-top: 20px;
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #e8e6e3;
+            background-color: #f8f8f8;
+        }
+
+        .intro-image {
+            float: left;
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #e8e6e3;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        strong {
+            color: #000000;
+            font-weight: bold;
+        }
+        
+        .contact {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #e8e6e3;
+        }
+        
+        a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .intro {
+            margin-bottom: 40px;
+        }
+        
+        .closing {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #e8e6e3;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 30px 20px;
+            }
+            
+            .project {
+                margin: 30px -20px;
+                padding: 20px;
+            }
+            
+            .results-section {
+                flex-direction: column;
+            }
+            
+            .project-image {
+                max-width: 100%;
+            }
+
+            .intro-image {
+                width: 100%;
+                float: none;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Video Editing Proposal for Not Another Club</h1>
+    
+    <div class="intro">
+        <img src="andy-lowe.jpg" alt="A portrait of the video editor, Andy Lowe" class="intro-image">
+        <p>My name is Andy Lowe and I'm based in Bristol, UK. 
+I'm a video editor with many years of experience but I've been doing it professionally since 2021 after I did a career change from being a professional musician (due to having kids). When creating video content, I approach every project as a storytelling challenge - I understand the importance of pacing and how to grab and retain the viewers attention from the first second. This translates into better conversion rates and ultimately more viewers being converted into customers. I see the bigger picture beyond just cutting footage together. I'm focused on getting the most out of your source material.</p>
+
+        <p>I also have a background in music composition and production, which means I can handle custom soundtracks and audio design when projects call for it. The soundtrack can really elevate something good into something wonderful!</p>
+
+        <p>Below I have listed three examples of my work that shows a range of skills.</p>
+    </div>
+
+    <div class="project">
+        <h2>Record-Breaking Kickstarter Campaign</h2>
+        <div class="project-link">
+            <a href="https://www.kickstarter.com/projects/lazarus-press/the-devil-in-the-19th-century-vol-2">View the campaign →</a>
+        </div>
+        <div class="project-content">
+            <p>I created the promotional videos for Lazarus Press's book launch campaigns. These weren't just any book launches - we were crowdfunding translations of obscure 19th century occult texts. The challenge was making something incredibly niche compelling enough that complete strangers would open their wallets and back the project.</p>
+            
+            <p>The videos had to capture the handmade, artisanal aesthetic that was crucial to the brand, using original book illustrations in a stop-motion style. The client was very determined to pursue this route as a key differentiator in a landscape that is quickly becoming overrun with obviously AI-generated, cheap and quick content. I also handled all the sound design and music arrangement - cutting together classical pieces to create an emotional journey, plus composing the dramatic organ theme for the first campaign's finale.</p>
+            
+            <p>The results speak for themselves - both videos were central to campaigns that broke records for book launches on Kickstarter.</p>
+            
+            <div class="results-section">
+                <ul>
+                    <li><strong><a href="https://www.kickstarter.com/projects/lazarus-press/the-devil-in-the-19th-century/description">Campaign 1</a>:</strong> Over 1,000 backers, £90,000 raised</li>
+                    <li><strong>Campaign 2:</strong> £75,000+ in the first 48 hours alone</li>
+                    <li>Both campaigns were featured by Kickstarter as quality projects</li>
+                </ul>
+                <div class="project-image">
+                    <img src="kickstarter-campaign.jpg" alt="Kickstarter campaign results showing funding progress">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project">
+        <h2>Product Demonstration That Actually Works</h2>
+        <div class="project-link">
+            <a href="https://youtu.be/QeztWUzScWw">Watch the video →</a>
+        </div>
+        <div class="project-content">
+            <p>Natracare needed a 1-minute video demonstrating that their wipes actually dissolve like toilet paper. Sounds simple, but the challenge was making something that people would actually want to watch and share, not just skip past.</p>
+            
+            <p>I kept it light-hearted and snappy, getting straight to the point while making the science visually engaging. The client wanted it to grab attention immediately and deliver the message clearly.</p>
+            
+            <div class="results-section">
+                <ul>
+                    <li>Widely shared across their social channels and embedded in multiple blog posts</li>
+                    <li>The video successfully converted browsers into customers by clearly demonstrating the product benefit</li>
+                </ul>
+                <div class="project-image">
+                    <img src="natracare-demo.jpg" alt="Natracare product demonstration video screenshot">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project">
+        <h2>Viral Social Media Content</h2>
+        <div class="project-link">
+            <a href="https://x.com/NautilusWallet/status/1490148620078776324">See the post →</a>
+        </div>
+        <div class="project-content">
+            <p>A crypto wallet needed to announce their new app integration. Their brand is "Nautilus" so they wanted something with a submarine theme. I took old movie footage of a submarine, layered in modern UI elements, and created a reflection effect of their logo in the captain's mask.</p>
+            
+            <p>The whole thing needed to feel both vintage and cutting-edge, matching their community's vibe perfectly.</p>
+            
+            <div class="results-section">
+                <ul>
+                    <li>Hundreds of likes, 40+ retweets, 20+ comments</li>
+                    <li>Hit exactly what they needed for algorithm engagement and community response</li>
+                </ul>
+                <div class="project-image">
+                    <img src="nautilus-social.jpg" alt="Nautilus wallet social media video screenshot">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="closing">
+        <p>For Not Another Club, I would be keen to hear what you are specifically looking to create with regards to effective paid adverts and trailers. I can only assume these would be to promote membership to your online club. My initial thoughts are that I would aim to create content that mirrors your distinctive visual style. Your brand is all about authenticity and originality — my edits would be designed to highlight that personality.</p>
+
+        <p>I work best with clients who have real passion for what they're doing, who are mission-based, and it seems like you fit that bill exactly. When you care deeply about your project, I feed off that energy and go the extra mile to make it exceptional. I have a 100% client retention rate - every client I've worked with has given me more work and/or referred others.</p>
+
+        <p>If you would be willing to explore the possibility of us working together, the next step would be to set up a short call at a convenient time. I would love to hear your vision for the content you would like to have created, and from there I can put together a tailored outline and sample concepts so you can see exactly how I would approach your content.</p>
+    </div>
+
+    <div class="contact">
+        <p><strong>Email:</strong> andylowe14@hotmail.co.uk</p>
+    </div>
+<div class="clearfix"></div>
+</body>
+</html>
